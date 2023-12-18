@@ -6,11 +6,13 @@ import Api from "./components/Api";
 import HomePage from "./components/HomePage";
 import Root from "./components/Root";
 import NotFound from "./components/NotFound";
+
+const baseUrl = "http://localhost:3001"; // Adjust the port if needed
+const endpoint = "/games?country=TR"; // The correct endpoint on your Express server
+
 function App() {
-  const baseUrl =
-    "https://cors-anywhere.herokuapp.com/https://store-site-backend-static.ak.epicgames.com";
-  const endpoint = "/freeGamesPromotions?country=TR";
   const [games, setGames] = useState();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,6 +25,7 @@ function App() {
 
     fetchData();
   }, []);
+
   return (
     <Routes>
       <Route path="/apirequestdenemesi" element={<Api />} />

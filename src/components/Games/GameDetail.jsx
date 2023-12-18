@@ -36,7 +36,9 @@ const GameDetail = ({ game }) => {
         <img width="75%" height="75%" src={game.keyImages[0].url} />
       </Box>
       <Box sx={{}}>
-        <Typography variant="h6">{game.description}</Typography>
+        <Typography className="center-text" variant="h6">
+          {game.description}
+        </Typography>
         {game.price.totalPrice.fmtPrice.originalPrice !==
           game.price.totalPrice.fmtPrice.discountPrice && (
           <Typography
