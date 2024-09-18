@@ -6,6 +6,7 @@ import Api from "./components/Api";
 import HomePage from "./components/HomePage";
 import Root from "./components/Root";
 import NotFound from "./components/NotFound";
+import UnderConstruction from "./components/UnderConstruction";
 
 const baseUrl = "http://localhost:3025"; // Adjust the port if needed
 const endpoint = "/games?country=TR"; // The correct endpoint on your Express server
@@ -30,7 +31,10 @@ function App() {
     <Routes>
       <Route path="/apirequestdenemesi" element={<Api />} />
       <Route path="/" element={<Root />}>
-        <Route path="home" element={<HomePage games={games} />} />
+        <Route path="/free" element={<HomePage games={games} />} />
+        <Route path="/discount" element={<UnderConstruction />} />
+        <Route path="/wishlist" element={<UnderConstruction />} />
+
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

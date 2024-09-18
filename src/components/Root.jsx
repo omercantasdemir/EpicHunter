@@ -41,7 +41,7 @@ function ResponsiveAppBar() {
               variant="h6"
               noWrap
               component="a"
-              href="/home"
+              href="/free"
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
@@ -109,7 +109,7 @@ function ResponsiveAppBar() {
               variant="h5"
               noWrap
               component="a"
-              href="/home"
+              href="/free"
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
