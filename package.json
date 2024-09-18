@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:vite dev:proxy",
     "dev:vite": "vite",
+    "prestart": "node check-deps.js",
     "dev:proxy": "set PORT=3001 && node ./proxy/index.js",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
