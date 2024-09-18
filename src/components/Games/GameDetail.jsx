@@ -26,7 +26,7 @@ const GameDetail = ({ game }) => {
     <Box className="detailView">
       <Link
         style={{ color: "black" }}
-        to={`https://store.epicgames.com/en-US/p/${game.catalogNs.mappings[0].pageSlug}`}
+        to={`https://store.epicgames.com/en-US/p/${game.productSlug}`}
       >
         <Typography variant="h4" className="center-text">
           {game.title}
@@ -50,7 +50,7 @@ const GameDetail = ({ game }) => {
         )}
         <Link
           sx={{ textDecoration: "none" }}
-          to={`https://store.epicgames.com/en-US/p/${game.catalogNs.mappings[0].pageSlug}`}
+          to={`https://store.epicgames.com/en-US/p/${game.productSlug}`}
         >
           {game.price.totalPrice.fmtPrice.discountPrice == 0 ? (
             <Typography
